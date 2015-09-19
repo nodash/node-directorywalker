@@ -1,6 +1,8 @@
 DirectoryWalker for NodeJS
 ==========================
 
+[![Build Status](https://travis-ci.org/scravy/node-directorywalker.svg)](https://travis-ci.org/scravy/node-directorywalker)
+
 Walk directories recursively and event based.
 
 Usage
