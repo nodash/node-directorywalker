@@ -1,0 +1,27 @@
+{
+  "name": "directorywalker",
+  "version": "1.0.0",
+  "description": "Walk directories recursively and event based.",
+  "main": "DirectoryWalker.js",
+  "scripts": {
+    "test": "jshint *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scravy/node-directorywalker.git"
+  },
+  "keywords": [
+    "filesystem",
+    "directories",
+    "folders"
+  ],
+  "author": "Julian Fleischer <tirednesscankill@warhog.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scravy/node-directorywalker/issues"
+  },
+  "homepage": "https://github.com/scravy/node-directorywalker",
+  "devDependencies": {
+    "jshint": "^2.8.0"
+  }
+}
