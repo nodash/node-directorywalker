@@ -10,12 +10,14 @@ Usage
 
 Example:
 
-    var DirectoryWalker = require('directorywalker');
-    var walker = new DirectoryWalker({ /* optional options object */ });
-    
-    walker.on('file', function (file) { console.log(file); });
-    
-    walker.walk(__dirname);
+```JavaScript
+var DirectoryWalker = require('directorywalker');
+var walker = new DirectoryWalker({ /* optional options object */ });
+
+walker.on('file', function (file) { console.log(file); });
+
+walker.walk(__dirname);
+```
 
 API
 ---
@@ -34,29 +36,44 @@ the `file` event will be emitted for the given file.
 The `dirFilter` is invoked every time a dir is encountered.
 If the result (gathered asynchronously, the callback takes an error as
 its first argument and the verdict as its second argument) is trueish
-the `dir` event will be emitted for the given file. **If the event is not trueish,
-the event will not be emitted and _the directory will not be descended into_.**
+the `dir` event will be emitted for the given file. **If the event is
+not trueish, the event will not be emitted and
+_the directory will not be descended into_.**
 
 ### Events
 
-    walker.on('file', function (path) { ... })
+```JavaScript
+walker.on('file', function (path) { ... })
+```
 
-Emitted each time a file is encountered and accepted by the `fileFilter` (if any).
+Emitted each time a file is encountered and accepted by
+the `fileFilter` (if any).
 
-    walker.on('dir', function (path) { ... })
+```JavaScript
+walker.on('dir', function (path) { ... })
+```
 
-Emitted each time a directory is encountered and accepted by the `dirFilter` (if any).
+Emitted each time a directory is encountered and accepted by
+the `dirFilter` (if any).
 
-    walker.on('error', function (path, err) { ... })
+```JavaScript
+walker.on('error', function (path, err) { ... })
+```
 
-Emitted each time an error occurs (for example when statting a file, invoking a filter, ...).
+Emitted each time an error occurs (for example when statting a file,
+invoking a filter, ...).
 
-    walker.on('entry', function (path) { ... })
+```JavaScript
+walker.on('entry', function (path) { ... })
+```
 
-Emitted each time a directory entry (be it a file, a directory, anything) is encountered.
+Emitted each time a directory entry (be it a file, a directory,
+anything) is encountered.
 
-    walker.on('stats', function (path, stats) { ... })
+```JavaScript
+walker.on('stats', function (path, stats) { ... })
+```
 
-Emitted each time a directory entry is statted. The event also carries the stats for that
-directory entry.
+Emitted each time a directory entry is statted. The event also
+carries the stats for that directory entry.
 
