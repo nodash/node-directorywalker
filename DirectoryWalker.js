@@ -9,6 +9,10 @@ var util = require('util');
 
 function DirectoryWalker(options) {
 
+  if (!(this instanceof DirectoryWalker)) {
+    return new DirectoryWalker(options);
+  }
+
   EventEmitter.call(this);  
   var self = this;
 
